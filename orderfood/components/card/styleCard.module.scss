@@ -1,0 +1,33 @@
+.textNone {
+  text-decoration: none !important;
+  color: black !important;
+}
+.cardProduct {
+  & .cardProductImg {
+    & img {
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s;
+      }
+    }
+  }
+  & .cardProductGoToShop {
+    visibility: hidden;
+  }
+  &:hover{
+      border: 1px solid;
+      & .cardProductGoToShop {
+        visibility: visible;
+      }
+  }
+}
+
+.highlightImg {
+  & img {
+    border-radius: 5rem !important;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
