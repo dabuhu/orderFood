@@ -37,24 +37,36 @@ const Entity = {
       name: "Beauty In The Pot",
       price: 50,
       sale: 20,
+      dietary: 'Vegetarian Options',
+      promotion: 'Discount off',
+
     },
     {
       linkImg: "/images/highlight/mooncake.jpg",
       name: "The Boller",
       price: 210,
       sale: 20,
+      dietary: 'Vegetarian Options',
+      promotion: 'Free Delivery',
+
     },
     {
       linkImg: "/images/highlight/free.jpg",
       name: "Dian Xiao Er Delivery",
       price: 40,
       sale: 20,
+      dietary: 'Vegetarian Options',
+      promotion: 'Free Delivery',
+
     },
     {
       linkImg: "/images/highlight/mooncake.jpg",
       name: "Swee Choon Tim Sum Restaurant",
       price: 50,
       sale: 20,
+      dietary: 'Vegetarian',
+      promotion: 'Discount off',
+
     },
     // { linkImg: "/images/highlight/mooncake.jpg", name: "Beauty In The Pot", price: 50, sale: 20 },
   ],
