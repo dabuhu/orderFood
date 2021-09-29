@@ -6,7 +6,7 @@ import HighlightCard from "../components/card/HighlightCard";
 import Layout from "../components/Layout";
 import { highlight, productTrending } from "../entity/Highlight";
 import styles from "../styles/Home.module.css";
-import Link from "next/Link";
+import Link from "next/link";
 export default function Page() {
   return (
     <>

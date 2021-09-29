@@ -15,7 +15,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import React from "react";
 import HideOnScroll from "./HidenOnscroll";
 export interface HeaderProps {}
