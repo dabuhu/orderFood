@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-import Link from "next/Link";
+// import Link from "next/Link";
 import styles from "./styleCard.module.scss";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import { Button } from "@mui/material";
@@ -17,8 +17,8 @@ type cardItem = {
 export default function CardProduct({ item }: CardProductProps) {
   return (
     <div className={`${styles.cardProduct}`}>
-      <Link href="#">
-        <a
+      <div>
+        <a  href="#"
           className={`d-flex flex-column justify-content-center align-item-center ${styles.cardProductImg}`}
         >
           <div>
@@ -34,7 +34,7 @@ export default function CardProduct({ item }: CardProductProps) {
             <Button variant="outlined">Go to shop</Button>
           </div>
         </a>
-      </Link>
+      </div>
     </div>
   );
 }
