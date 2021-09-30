@@ -121,6 +121,10 @@ export default function Header(props: HeaderProps) {
                 aria-label="show 4 new mails"
                 color="inherit"
                 onClick={gotoExplore}
+                sx={{
+                  borderRadius: 0,
+                  height: '50px'
+                }}
               >
                 <FoodBankIcon />
                 EXPLORE
@@ -135,17 +139,29 @@ export default function Header(props: HeaderProps) {
                 aria-label="show 17 new notifications"
                 color="inherit"
                 onClick={gotoFavorite}
+                sx={{
+                  borderRadius: 0,
+                  height: '50px'
+                }}
               >
-                <FavoriteIcon color="error" /> FAVORITE
+                <FavoriteIcon color="error"/> FAVORITE
               </IconButton>
               <IconButton
                 size="small"
                 aria-label="show 17 new notifications"
                 color="secondary"
+                sx={{
+                  backgroundColor: "black",
+                  borderRadius: 0,
+                  color: "white",
+                  marginLeft: '20px',
+                  '&:hover':{
+                    backgroundColor: "black",
+                    outline: '1px solid red'
+                  }
+                }}
               >
-                <ColorButton variant="contained">
-                  Sign in / Register
-                </ColorButton>
+                Sign in / Register
               </IconButton>
             </Box>
           </Toolbar>

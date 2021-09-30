@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "../components/Layout";
+import FilterProvider from "../provider/provider";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -15,9 +16,11 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return getLayout(
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <FilterProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </FilterProvider>
   );
 }
 export default MyApp;

@@ -37,39 +37,42 @@ const Entity = {
       name: "Beauty In The Pot",
       price: 50,
       sale: 20,
-      dietary: 'Vegetarian Options',
-      promotion: 'Discount off',
-
+      dietary: "Vegetarian Options",
+      promotion: "Discount off",
     },
     {
-      linkImg: "/images/highlight/mooncake.jpg",
+      linkImg: "/images/product/2.jpg",
       name: "The Boller",
       price: 210,
       sale: 20,
-      dietary: 'Vegetarian Options',
-      promotion: 'Free Delivery',
-
+      dietary: "Vegetarian Options",
+      promotion: "Free Delivery",
     },
     {
-      linkImg: "/images/highlight/free.jpg",
+      linkImg: "/images/product/3.jpg",
       name: "Dian Xiao Er Delivery",
       price: 40,
       sale: 20,
-      dietary: 'Vegetarian Options',
-      promotion: 'Free Delivery',
-
+      dietary: "Vegetarian Options",
+      promotion: "Free Delivery",
     },
     {
-      linkImg: "/images/highlight/mooncake.jpg",
+      linkImg: "/images/product/4.jpg",
       name: "Swee Choon Tim Sum Restaurant",
       price: 50,
       sale: 20,
-      dietary: 'Vegetarian',
-      promotion: 'Discount off',
-
+      dietary: "Vegetarian",
+      promotion: "Discount off",
     },
-    // { linkImg: "/images/highlight/mooncake.jpg", name: "Beauty In The Pot", price: 50, sale: 20 },
+    {
+      linkImg: "/images/product/5.jpg",
+      name: "End Of The Month",
+      price: 70,
+      sale: 20,
+      dietary: "Vegetarian",
+      promotion: "Discount off",
+    },
   ],
 };
-export const { highlight ,productTrending} = Entity;
+export const { highlight, productTrending } = Entity;
 export default Entity;
