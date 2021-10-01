@@ -1,79 +1,35 @@
-import SearchIcon from "@mui/icons-material/Search";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FoodBankIcon from "@mui/icons-material/FoodBank";
 import {
   AppBar,
-  Box,
-  Button,
-  ButtonProps,
-  CssBaseline,
+  Box, CssBaseline,
   Divider,
-  IconButton,
-  InputBase,
-  Toolbar,
+  IconButton, Toolbar
 } from "@mui/material";
-import FoodBankIcon from "@mui/icons-material/FoodBank";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import { styled } from "@mui/material/styles";
+import SearchBar from "material-ui-search-bar";
 import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
+import { FilterContext } from "../../provider/provider";
 import HideOnScroll from "./HidenOnscroll";
 export interface HeaderProps {}
 
 export default function Header(props: HeaderProps) {
   const router = useRouter();
-  const Search = styled("div")(({ theme }) => ({
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    border: "1px solid black",
-    color: "black",
-    "&:hover": {
-      border: "1px solid black",
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(3),
-      width: "auto",
-    },
-  }));
-  const SearchIconWrapper = styled("div")(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    color: "black",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }));
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      width: "100%",
-      [theme.breakpoints.up("md")]: {
-        width: "20ch",
-      },
-    },
-  }));
-  const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
-    color: "white",
-    textTransform: "none",
-    backgroundColor: "black",
-    "&:hover": {
-      //   backgroundColor: purple[700],
-    },
-  }));
+  const { keywordGlobal, setGlobalKeyword } = useContext(FilterContext);
   const gotoExplore = () => {
     router.push("/explore");
   };
   const gotoFavorite = () => {
     router.push("/favorite");
+  };
+  const requestSearch = (searchedVal: string) => {
+    setGlobalKeyword(searchedVal);
+  };
+
+  const cancelSearch = () => {
+    setGlobalKeyword("");
   };
   return (
     <div className="container">
@@ -87,15 +43,11 @@ export default function Header(props: HeaderProps) {
               </a>
             </Link>
             <Box sx={{ flexGrow: 1 }} />
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
+            {/* <SearchBar
+              value={keywordGlobal}
+              onChange={(searchVal) => requestSearch(searchVal)}
+              onCancelSearch={() => cancelSearch()}
+            /> */}
             <Box
               sx={{
                 display: "flex",
@@ -123,7 +75,7 @@ export default function Header(props: HeaderProps) {
                 onClick={gotoExplore}
                 sx={{
                   borderRadius: 0,
-                  height: '50px'
+                  height: "50px",
                 }}
               >
                 <FoodBankIcon />
@@ -141,10 +93,10 @@ export default function Header(props: HeaderProps) {
                 onClick={gotoFavorite}
                 sx={{
                   borderRadius: 0,
-                  height: '50px'
+                  height: "50px",
                 }}
               >
-                <FavoriteIcon color="error"/> FAVORITE
+                <FavoriteIcon color="error" /> FAVORITE
               </IconButton>
               <IconButton
                 size="small"
@@ -154,11 +106,11 @@ export default function Header(props: HeaderProps) {
                   backgroundColor: "black",
                   borderRadius: 0,
                   color: "white",
-                  marginLeft: '20px',
-                  '&:hover':{
+                  marginLeft: "20px",
+                  "&:hover": {
                     backgroundColor: "black",
-                    outline: '1px solid red'
-                  }
+                    outline: "1px solid red",
+                  },
                 }}
               >
                 Sign in / Register

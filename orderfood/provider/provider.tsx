@@ -10,8 +10,8 @@ export interface GlobalContent  {
   dietGlobal:string[],
   promotionGlobal:string,
   setGlobalDiet:(dietGlobal:string[])=>void,
-  setGlobalPromotion:(keywordGlobal:string)=>void,
-  setGlobalKeyword:(promotionGlobal:string)=>void,
+  setGlobalPromotion:(promotionGlobal:string)=>void,
+  setGlobalKeyword:(keywordGlobal:string)=>void,
 };
 const detfauldFilter = {
   keywordGlobal:'',

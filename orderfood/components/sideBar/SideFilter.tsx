@@ -18,11 +18,13 @@ import { FilterContext } from "../../provider/provider";
 export interface SideFilterProps {}
 
 export default function SideFilter(props: SideFilterProps) {
-  const {setGlobalDiet,setGlobalPromotion } = useContext(FilterContext);
-  
+  const { setGlobalDiet, setGlobalPromotion, promotionGlobal } =
+    useContext(FilterContext);
   const [dietChecked, setDietChecked] = useState<string[]>([]);
-  const [promotionChecked, setPromotionChecked] = useState<string>('');
-
+  const [promotionChecked, setPromotionChecked] = useState<string>("");
+  useEffect(() => {
+      setPromotionChecked(promotionGlobal);
+  }, [promotionGlobal]);
   const handleToggle = (value: string) => () => {
     const currentIndex: number = dietChecked.indexOf(value);
     const newChecked: string[] = [...dietChecked];
@@ -41,11 +43,11 @@ export default function SideFilter(props: SideFilterProps) {
   };
   const handleClearPromotion = () => {
     setPromotionChecked("");
-    setGlobalPromotion('')
+    setGlobalPromotion("");
   };
   const handleClickPromotion = (promotionName: string) => {
     setPromotionChecked(promotionName);
-    setGlobalPromotion(promotionName)
+    setGlobalPromotion(promotionName);
   };
   return (
     <div>
@@ -102,6 +104,7 @@ export default function SideFilter(props: SideFilterProps) {
                 value={item.promotionName}
                 control={<Radio />}
                 label={item.promotionName}
+                checked={item.promotionName===promotionChecked}
               />
             ))}
           </RadioGroup>
