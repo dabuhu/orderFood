@@ -6,7 +6,6 @@ import {
   Divider,
   IconButton, Toolbar
 } from "@mui/material";
-import SearchBar from "material-ui-search-bar";
 import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
 import Link from "next/link";
