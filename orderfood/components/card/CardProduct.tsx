@@ -4,17 +4,11 @@ import Link from 'next/link';
 import styles from "./styleCard.module.scss";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import { Button } from "@mui/material";
+import { product } from "../../interface/interface";
 
 export interface CardProductProps {
-  item: cardItem;
+  item: product;
 }
-type cardItem = {
-  linkImg: string;
-  name: string;
-  price: number;
-  sale: number;
-  linkTo?:string,
-};
 export default function CardProduct({ item }: CardProductProps) {
   return (
     <div className={`${styles.cardProduct}`}>

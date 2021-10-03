@@ -7,21 +7,10 @@ import styles from "./Menus.module.scss";
 // import valiables from "../../styles/variables.scss";
 import { Stack } from "@mui/material";
 import CardDishes from "../../components/card/CardDishes";
+import { dishes as disheItem, menu} from "../../interface/interface";
 
 export interface MenusProps {}
-export type menu = {
-  menusId: number;
-  menusName: string;
-  linkImg: string;
-  description: string;
-  hashtag: string[];
-  dishesIds: number[];
-};
-type disheItem = {
-  linkImg: string;
-  dishesName: string;
-  linkTo?: string;
-};
+
 export default function Menus(props: MenusProps) {
   const router = useRouter();
   const [menu, setMenu] = useState<menu>();

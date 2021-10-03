@@ -1,15 +1,12 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from 'next/link';
+import { dishes } from "../../interface/interface";
 
 export interface CardDishesProps {
-  item: cardItem;
+  item: dishes;
 }
-type cardItem = {
-  linkImg: string;
-  dishesName: string;
-  linkTo?:string,
-};
+
 export default function CardDishes({ item }: CardDishesProps) {
   return (
     <div >

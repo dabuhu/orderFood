@@ -1,4 +1,4 @@
-import { Divider } from "@mui/material";
+import { Container, Divider } from "@mui/material";
 import React, { ReactElement } from "react";
 import Banner from "../components/banner/Banner";
 import CardProduct from "../components/card/CardProduct";
@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <Banner />
-      <div className="container">
+      <Container>
         <div className="highlight mt-5">
           <h4 className="ms-3">Highlights</h4>
           <div className="d-flex mt-3">
@@ -60,7 +60,7 @@ export default function Page() {
         </main>
 
         <footer className={styles.footer}></footer>
-      </div>
+      </Container>
     </>
   );
 }
