@@ -13,11 +13,12 @@ type cardItem = {
   name: string;
   price: number;
   sale: number;
+  linkTo?:string,
 };
 export default function CardProduct({ item }: CardProductProps) {
   return (
     <div className={`${styles.cardProduct}`}>
-      <Link href="#">
+      <Link href={item.linkTo||'#'}>
         <a
           className={`d-flex flex-column justify-content-center align-item-center ${styles.cardProductImg}`}
         >

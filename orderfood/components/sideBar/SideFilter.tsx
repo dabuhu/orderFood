@@ -40,6 +40,7 @@ export default function SideFilter(props: SideFilterProps) {
   };
   const handleClearDiet = () => {
     setDietChecked([]);
+    setGlobalDiet([]);
   };
   const handleClearPromotion = () => {
     setPromotionChecked("");

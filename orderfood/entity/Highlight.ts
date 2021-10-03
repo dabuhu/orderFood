@@ -38,6 +38,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Discount off",
     },
     {
@@ -46,6 +47,7 @@ const Entity = {
       price: 210,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Free Delivery",
     },
     {
@@ -54,6 +56,7 @@ const Entity = {
       price: 40,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Free Delivery",
     },
     {
@@ -62,6 +65,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Discount off",
     },
     {
@@ -70,6 +74,7 @@ const Entity = {
       price: 70,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Discount off",
     },
   ],
@@ -80,6 +85,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Discount off",
     },
     {
@@ -88,6 +94,7 @@ const Entity = {
       price: 210,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Free Delivery",
     },
     {
@@ -96,6 +103,7 @@ const Entity = {
       price: 40,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Free Delivery",
     },
     {
@@ -104,6 +112,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Discount off",
     },
     {
@@ -112,6 +121,7 @@ const Entity = {
       price: 70,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Discount off",
     },
     //
@@ -122,6 +132,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "National Day Bundles",
     },
     {
@@ -130,6 +141,7 @@ const Entity = {
       price: 210,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Cake & Milk",
       promotion: "Free Delivery",
     },
     {
@@ -138,6 +150,7 @@ const Entity = {
       price: 40,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Hotpot",
       promotion: "Free Delivery",
     },
     //
@@ -147,6 +160,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Hotpot",
       promotion: "National Day Bundles",
     },
     {
@@ -155,6 +169,7 @@ const Entity = {
       price: 70,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Hotpot",
       promotion: "National Day Bundles",
     },
     {
@@ -163,6 +178,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Hotpot",
       promotion: "National Day Bundles",
     },
 
@@ -173,6 +189,7 @@ const Entity = {
       price: 210,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Hotpot",
       promotion: "Mooncake Festival",
     },
     {
@@ -181,6 +198,7 @@ const Entity = {
       price: 40,
       sale: 20,
       dietary: "Vegetarian Options",
+      linkTo:"/menus/Hotpot",
       promotion: "Mooncake Festival",
     },
 
@@ -191,6 +209,7 @@ const Entity = {
       price: 50,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Hotpot",
       promotion: "1st Order Promos",
     },
     {
@@ -199,6 +218,7 @@ const Entity = {
       price: 70,
       sale: 20,
       dietary: "Vegetarian",
+      linkTo:"/menus/Hotpot",
       promotion: "1st Order Promos",
     },
     //
