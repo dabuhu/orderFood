@@ -4,7 +4,7 @@ const Common = {
       menusId: 1,
       menusName: "Cake & Milk",
       linkImg: "/images/logo/1.jpg",
-      hashtag: ["Free Delivery", "Discount Of", "MoonCake Festival"],
+      hashtag: ["Free Delivery", "Discount Of", "Mooncake Festival"],
       dishesIds: [1, 2, 4, 5, 6],
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus blanditiis corporis aut nobis. Nesciunt qui vel ad dolorem corrupti magni enim vitae minima molestias, consequuntur a quibusdam rem consequatur? Deserunt!",

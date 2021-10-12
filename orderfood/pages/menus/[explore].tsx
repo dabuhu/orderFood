@@ -7,11 +7,27 @@ import styles from "./Menus.module.scss";
 // import valiables from "../../styles/variables.scss";
 import { Stack } from "@mui/material";
 import CardDishes from "../../components/card/CardDishes";
-import { dishes as disheItem, menu} from "../../interface/interface";
+import { dishes as disheItem, menu } from "../../interface/interface";
 
-export interface MenusProps {}
-
+export interface MenusProps {
+  item: menu[];
+}
+export async function getStaticProps() {
+  const res = await fetch("http://192.168.0.104:3001/menus");
+  const data: menu[] = await res.json();
+  return {
+    props: { item: data },
+  };
+}
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { explore: 'Cake & Milk' } }, { params: { explore: 'Hotpot' } }],
+    fallback: true,
+  }
+}
 export default function Menus(props: MenusProps) {
+  const { item } = props;
+  console.log("item: ", item);
   const router = useRouter();
   const [menu, setMenu] = useState<menu>();
   const [dishesList, setDishesList] = useState<disheItem[]>();

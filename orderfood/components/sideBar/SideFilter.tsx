@@ -28,7 +28,7 @@ export default function SideFilter(props: SideFilterProps) {
   const handleToggle = (value: string) => () => {
     const currentIndex: number = dietChecked.indexOf(value);
     const newChecked: string[] = [...dietChecked];
-
+//
     if (currentIndex === -1) {
       newChecked.push(value);
     } else {
